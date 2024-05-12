@@ -21,3 +21,14 @@ async function subscribe(channel) {
     alert(`Вы не подписались на "${channel}"`);
   }
 }
+
+// Добавляем обработчики для кнопок обновления
+document.querySelectorAll("#channels button").forEach(button => {
+  const updateButton = document.createElement("button");
+  updateButton.textContent = "Обновить";
+  updateButton.onclick = async function() {
+    const channelName = button.textContent.trim();
+    await subscribe(channelName);
+  };
+  button.parentNode.insertBefore(updateButton, button.nextSibling);
+});
