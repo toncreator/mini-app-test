@@ -7,11 +7,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="balance">Ваш баланс: <span id="balanceAmount">0</span> TON</div>
+  <header>
+    <img src="logo.png" alt="Логотип">
+    <div id="balance">Баланс: <span id="balanceAmount">0</span> TON</div>
+  </header>
   <div id="channels">
-    <button onclick="subscribe('https://t.me/itsmrtony')">MR TONY</button>
-    <button onclick="subscribe('https://t.me/diamondhandsfoundation')">DHF</button>
-    <button onclick="subscribe('https://t.me/tonraffles_ru')">TonRaffles</button>
+    <div class="channel">
+      <button class="channelButton" onclick="subscribe('channel1')">Канал 1</button>
+      <button class="updateButton" onclick="subscribe('channel1')">Обновить</button>
+    </div>
+    <div class="channel">
+      <button class="channelButton" onclick="subscribe('channel2')">Канал 2</button>
+      <button class="updateButton" onclick="subscribe('channel2')">Обновить</button>
+    </div>
+    <div class="channel">
+      <button class="channelButton" onclick="subscribe('channel3')">Канал 3</button>
+      <button class="updateButton" onclick="subscribe('channel3')">Обновить</button>
+    </div>
   </div>
   <div id="adBanner">
     <!-- Здесь будет ваш рекламный баннер -->
